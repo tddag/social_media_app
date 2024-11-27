@@ -83,7 +83,7 @@ const UserProfile = () => {
               <div className="absolute top-0 z-1 right-0 p-2">
                 {userId === user._id && (
                   <GoogleLogout
-                    clientId={process.env.REACT_APP_GOOGLE_API_TOKEN}
+                    clientId={process.env.REACT_APP_GOOGLE_OAUTH_CLIENT_ID}
                     render={(renderProps) => (
                       <button
                         type="button"

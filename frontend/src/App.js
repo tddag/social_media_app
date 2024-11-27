@@ -8,11 +8,11 @@ const App = () => {
 
     const navigate = useNavigate();
 
-    useEffect(() => {
-      const user = fetchUser();
+    // useEffect(() => {
+    //   const user = fetchUser();
 
-      if(!user) navigate('/login');
-    }, [])
+    //   if(!user) navigate('/login');
+    // }, [])
     
 
     return (

@@ -10,6 +10,7 @@ import { client } from '../client';
 const Login = () => {
   const navigate = useNavigate();
   const responseGoogle = (response) =>{
+    console.log("Log in Result: ", JSON.stringify(response.profileObj))
     localStorage.setItem('user', JSON.stringify(response.profileObj));
 
     const { name, googleId, imageUrl } = response.profileObj;
@@ -47,7 +48,7 @@ const Login = () => {
           </div>            
           <div className="shadow-2x1">
             <GoogleLogin 
-              clientId={process.env.REACT_APP_GOOGLE_API_TOKEN}
+              clientId={process.env.REACT_APP_GOOGLE_OAUTH_CLIENT_ID}
               render={(renderProps) => (
                 <button
                   type="button"
